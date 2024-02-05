@@ -7,7 +7,6 @@ resource "aws_instance" "test_instance" {
   key_name      = "terraform"
 
   tags = {
-    Name = "raj"
-    # CustomTag = "instance-${each.key}"
+    Name = each.vale.name
   }
 }
